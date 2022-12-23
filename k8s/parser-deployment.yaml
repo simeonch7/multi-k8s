@@ -17,4 +17,6 @@ spec:
           image: simeonch7/parser
 #          ports:
 #            - containerPort: 5000
-#          env: 
+          env: 
+            - name: MONGODB_PORT
+              value: '27017'
