@@ -1,4 +1,4 @@
-sudo: rquired
+sudo: required
 services:
   - docker
 env:
