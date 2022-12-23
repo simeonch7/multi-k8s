@@ -26,5 +26,5 @@ kubectl set image deployments/client-deployment client=simeonch7/multi-client:$S
 kubectl set image deployments/server-deployment server=simeonch7/multi-server:$SHA
 kubectl set image deployments/worker-deployment worker=simeonch7/multi-worker:$SHA
 
-kubectl set image deployments/parser parser=simeonch7/parser:$SHA
-kubectl set image deployments/mongodb worker=simeonch7/mongodb:$SHA
+kubectl set image deployments/parser-deployment parser=simeonch7/parser:$SHA
+kubectl set image deployments/mongodb-deployment worker=simeonch7/mongodb:$SHA
