@@ -1,0 +1,21 @@
+sudo: required
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: parser-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      component: parser
+  template:
+    metadata:
+      labels:
+        component: parser
+    spec:
+      containers: 
+        - name: parser
+          image: simeonch7/parser
+#          ports:
+#            - containerPort: 5000
+#          env: 
