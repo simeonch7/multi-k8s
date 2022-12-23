@@ -15,7 +15,7 @@ docker push simeonch7/multi-worker:latest
 docker push simeonch7/multi-worker:$SHA
 
 docker push simeonch7/mongodb:latest
-docker push simeonch7/moongodb:$SHA
+docker push simeonch7/mongodb:$SHA
 
 docker push simeonch7/parser:latest
 docker push simeonch7/parser:$SHA
