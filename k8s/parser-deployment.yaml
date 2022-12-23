@@ -20,3 +20,10 @@ spec:
           env: 
             - name: MONGODB_PORT
               value: '27017'
+            - name: MONGO_INITDB_ROOT_USERNAME
+              value: 'root'
+            - name: MONGO_INITDB_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mongodbpassword
+                  key: MONGODBPASSWORD
