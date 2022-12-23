@@ -3,7 +3,7 @@ docker build -t simeonch7/multi-server:latest -t simeonch7/multi-server:$SHA -f 
 docker build -t simeonch7/multi-worker:latest -t simeonch7/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker build -t simeonch7/mongodb:latest -t simeonch7/mongodb:$SHA -f ./mongodb/Dockerfile ./mongodb
-docker build -t simeonch7/parser:latest -t simeonch7/parser:$SHA -f ./mongodb/Dockerfile ./parser
+docker build -t simeonch7/parser:latest -t simeonch7/parser:$SHA -f ./parser/Dockerfile ./parser
 
 docker push simeonch7/multi-client:latest
 docker push simeonch7/multi-client:$SHA
