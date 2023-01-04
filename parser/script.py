@@ -26,13 +26,15 @@ from google.cloud import storage
 #parquet_path = "./parquet_files/"
 #parquet_file = "raw-parquets_userdata1.parquet"
 
+filename = "gs://data-ims/raw-parquets/userdata1.parquet"
+
 timestamp = str(time.time())
 
 try:
-  print(pd.read_parquet("gs://data-ims/raw-parquets/userdata1.parquet", engine='auto'))
-  state = {"filename": parquet_file, "stage": "completed", "time": timestamp}
+  print(pd.read_parquet(filename, engine='auto'))
+  state = {"filename": filename, "stage": "completed", "time": timestamp}
 except:
-  state = {"filename": parquet_file, "stage": "failed", "time": timestamp}
+  state = {"filename": filename, "stage": "failed", "time": timestamp}
   print("An exception occurred")
 
 
